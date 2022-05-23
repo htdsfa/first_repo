@@ -1,0 +1,45 @@
+<html>
+<body>
+<center><img src="Screenshot_2021-11-12-16-00-48-125_com.snapchat.android.jpg" width="270" height="600"><center>
+</body>
+<canvas width="1920" height="400" id="maluj"></canvas>
+<script>
+const malarz = maluj.getContext('2d');
+function rysujPrzycisk (x,y,r,imie){
+malarz.lineWidth=r/10;
+malarz.strokeStyle="blue";
+malarz.fillStyle="lime";
+malarz.beginPath();
+malarz.arc(x,y,r,0,Math.PI*2);
+malarz.stroke();
+malarz.fill();
+malarz.closePath();
+malarz.fillStyle="black";
+malarz.font = r*0.8+"px Arial"
+malarz.textBaseline="middle";
+malarz.textAlign="center"
+malarz.fillText(imie,x,y);
+}
+
+rysujPrzycisk(570,50,40, "W");
+rysujPrzycisk(620,70,30, "O");
+rysujPrzycisk(670,60,30, "J");
+rysujPrzycisk(720,70,30, "T");
+rysujPrzycisk(770,60,30, "U");
+rysujPrzycisk(820,50,40, "Ś");
+rysujPrzycisk(960,60,40, "I");
+rysujPrzycisk(890,150,40, "04.");
+rysujPrzycisk(960,160,40, "05");
+rysujPrzycisk(1030,150,40, ".2021");
+rysujPrzycisk(960,300,50, "<3");
+rysujPrzycisk(1100,50,40, "M");
+rysujPrzycisk(1150,70,30, "A");
+rysujPrzycisk(1200,60,30, "D");
+rysujPrzycisk(1250,70,30, "Z");
+rysujPrzycisk(1300,60,30, "I");
+rysujPrzycisk(1350,70,30, "U");
+rysujPrzycisk(1400,60,30, "L");
+rysujPrzycisk(1450,70,30, "K");
+rysujPrzycisk(1500,50,40, "A");
+</script>
+<html>

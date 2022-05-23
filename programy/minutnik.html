@@ -1,0 +1,17 @@
+<html>
+<body>
+<p id="czas">?</p>
+<script>
+var sek = 0;
+
+function cykl() 
+{
+
+sek++
+document.getElementById("czas").innerHTML=sek;
+setTimeout(cykl,1000);
+}
+cykl()
+</script>
+</body>
+</html>

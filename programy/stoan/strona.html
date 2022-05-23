@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+	<html lang="pl"> 
+		<head> 
+			<meta charset="utf-8"> 
+			<title>Serwis komputerowy </title> 
+			<link rel="stylesheet" href="styl.css"> 
+			<script>
+				function oblicz(){
+				let Cena=document.getElementById("Cena").value;
+				let czyszczenie=document.getElementsByName("czyszczenie");
+				let wymiana=document.getElementsByName("wyp");
+				let wycena="Cena bazowa 50 zł";
+				let suma=50;
+				
+				if (Cena!="1000 zł")
+				{wycena+="<br> Komputer za "+document.getElementById("Cena").value+"zł";
+				suma+=parseInt(document.getElementById("Cena").value);
+				document.getElementById("komp").src=Cena+'.png';
+				}
+				else
+				document.getElementById("komp").src=Cena+'.png';
+				
+				
+				if(czyszczenie[0].checked)
+				{wycena+="<br> Czyszczenie sprzętu komputerowego: 150 zł";
+				suma+=150;
+				}
+				if(wymiana[0].checked)
+				{wycena+="<br> Wymiana obudowy: 160 zł";
+				suma+=160;
+				}
+				if(wymiana[1].checked)
+				{wycena+="<br> Wymiana płyty głównej: 200 zł";
+				suma+=200;
+				}
+				if(wymiana[2].checked)
+				{wycena+="<br> Wymiana procesora: 60 zł";
+				suma+=60;
+				}
+				if(wymiana[3].checked)
+				{wycena+="<br> Wymiana chłodzenia procesora: 75 zł";
+				suma+=75;
+				}
+				if(wymiana[4].checked)
+				{wycena+="<br> Wymiana karty graficznej: 80 zł";
+				suma+=80;
+				}
+				if(wymiana[5].checked)
+				{wycena+="<br> Wymiana kości RAM-u: 25 zł";
+				suma+=25;
+				}
+				if(wymiana[6].checked)
+				{wycena+="<br> Wymiana dysku: 50 zł";
+				suma+=50;
+				}
+				if(wymiana[7].checked)
+				{wycena+="<br> Wymiana zasilacza: 210 zł";
+				suma+=210;
+				}
+
+				
+	 wycena+='<hr> <h1> Razem: '+suma+'zł </h1>';
+	 document.getElementById("wycena").innerHTML=wycena;
+				}
+			</script>
+		</head> 
+		<body>
+			<section id="kontener">
+			<section id="baner"> 
+				<h1>Serwis komputerowy</h1> 
+			</section>
+			<section id="lewy">
+				<h3>Złożenie nowego komputera za daną cenę</h3>
+					<select id="Cena" onchange="oblicz()">
+					<option value="0"></option>
+					<option value="1000">1000 zł</option>
+					<option value="2500">2500 zł</option>
+					<option value="4000">4000 zł</option>
+					<option value="5500">5500 zł</option>
+					<option value="7000">7000 zł</option>
+					<option value="10000">+10000 zł</option>
+					</select>		
+			</section>
+			<section id="prawy">
+				<h3>Czyszczenie sprzętu komputerowego</h3>
+					<input type="checkbox" name="czyszczenie" onchange="oblicz()" >Tak<br>
+				<hr />
+				<h3>Znalzienie usterki i/lub wymiana podzespołów</h3>
+					<input type="checkbox" name="wyp" onchange="oblicz()">Obudowa<br />
+					<input type="checkbox" name="wyp" onchange="oblicz()">Płyta główna<br /> 
+					<input type="checkbox" name="wyp" onchange="oblicz()">Procesor <br /> 
+					<input type="checkbox" name="wyp" onchange="oblicz()">Chłodzenie procesora <br /> 
+					<input type="checkbox" name="wyp" onchange="oblicz()">Karta graficzna <br /> 
+					<input type="checkbox" name="wyp" onchange="oblicz()">RAM <br /> 
+					<input type="checkbox" name="wyp" onchange="oblicz()">Dysk<br /> 
+					<input type="checkbox" name="wyp" onchange="oblicz()">Zasilacz <br />
+				<hr />
+			</section > 
+			<section id="środek">
+			<img id="komp" src="0.png" alt="X"/>
+			<h2>Wycena</h2>
+			<p id="wycena">
+			Cena bazowa 50 zł
+			</p>
+			</section> 
+			<section id="stopka">
+				Autor: Wojciech Frankiewicz 3i1
+			</section>
+			</section>
+		</body>
+	</html>

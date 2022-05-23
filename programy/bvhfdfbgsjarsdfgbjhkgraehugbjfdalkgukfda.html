@@ -1,0 +1,19 @@
+<html>
+<canvas width="400" height="400" id="maluj"></canvas>
+<script>
+var c =maluj.getContext('2d');
+function KWADRAT(x,y,bok,kolor){
+c.strokeStyle=kolor;
+c.strokeRect(x,y,bok,bok);
+}
+for (var i = 0; i<50; i=i+1){
+var x = 100 * Math.random();
+var y = 100 * Math.random();
+var R = 256 * Math.random();
+var G = 256 * Math.random();
+var B = 256 * Math.random();
+var kolor = "rgba("+R+","+G+","+B+")";
+
+KWADRAT(x,y,100,kolor);
+}
+</script>

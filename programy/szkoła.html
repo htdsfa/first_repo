@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jeb** szkołe</title>
+	<style>
+		body {background-image: url('HD wallpaper_ black honeycomb wallpaper, minimalism, hexagon, backgrounds, pattern.jpg');	}
+		h2 {font-family:sans-serif;color:blue;}
+	</style>
+	<center>
+	<h2>	
+	<script>
+			var sylw = new Date (2022,5,24,1);
+			var teraz = new Date();
+			var czas = sylw-teraz;
+			var dni = Math.floor(czas/(1000*60*60*24));
+			
+			document.write("Do końca roku szkolnego zostało "+dni+" dni.");
+			function odliczanie()
+	{
+	var dzisiaj = new Date();
+				
+	var godzina = dzisiaj.getHours();
+	if (godzina<10) godzina = "0"+godzina;
+				
+	var minuta = dzisiaj.getMinutes();
+	if (minuta<10) minuta = "0"+minuta;
+
+	var sekunda = dzisiaj.getSeconds();
+	if (sekunda<10) sekunda = "0"+sekunda;
+				
+	document.getElementById("zegar").innerHTML = godzina+":"+minuta+":"+sekunda;
+	setTimeout("odliczanie()",1000);
+	}
+	</script>
+	</h2>
+	</center>		
+</head>
+<body onload="odliczanie()";>
+
+	<center><video width="900" height="750" controls autoplay muted>
+	<source src="Jaglak nr 2.mp4" type="video/mp4" >
+  
+
+	</video></center>
+	<center>
+	<h2>
+	<script>
+	
+	</script>
+	</h2>
+	</center>
+
+	<div id="zegar"> </div>
+</body>
+</html>
